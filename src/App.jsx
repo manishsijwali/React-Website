@@ -16,7 +16,7 @@ import CardGrid from "./Components/Cards";
 
 function App() {
   return (
-    <>
+    <div >
       <Navbar />
       <Hero />
       <Services />
@@ -29,7 +29,7 @@ function App() {
       {/* <Card/> */}
       <CardGrid/>
       <Footer />
-    </>
+    </div>
   );
 }
 

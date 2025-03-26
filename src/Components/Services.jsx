@@ -4,7 +4,13 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaCode, FaPaintBrush, FaMobileAlt } from "react-icons/fa";
+import {
+  FaCode,
+  FaPaintBrush,
+  FaMobileAlt,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -53,28 +59,29 @@ const servicesData = [
 
 const ServiceCard = ({ id, title, description, icon }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[[#7ad6b4]]">
-      <div className="mb-16">
+    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4]">
+      <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         {/* Number Background */}
-        <span className="absolute top-4 right-4 text-6xl font-bold text-gray-200 ">
+        <span className="absolute top-4 right-4 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-200">
           {id}
         </span>
 
         {/* Icon */}
-        <div className="absolute top-4 left-4 text-6xl font-bold text-gray-200">
+        <div className="absolute top-4 left-4 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-200">
           {icon}
         </div>
       </div>
+
       {/* Title */}
-      <h3 className="text-2xl font-semibold text-start  text-gray-600 mb-2">
+      <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-2xl font-semibold text-start text-gray-600 mb-2">
         {title}
       </h3>
 
       {/* Description */}
-      <p className=" text-start  text-gray-600 mb-4">{description}</p>
+      <p className="text-start text-gray-600 mb-4">{description}</p>
 
       {/* Read More Button */}
-      <button className="text-[#7ad6b4] ml-42 lg:ml-52 font-medium border border-[#7ad6b4] px-4 py-2 rounded-lg transition hover:bg-[#7ad6b4] hover:text-black">
+      <button className="text-[#7ad6b4] ml-0 sm:ml-4 md:ml-8 lg:ml-12 font-medium border border-[#7ad6b4] px-4 py-2 rounded-lg transition hover:bg-[#7ad6b4] hover:text-black">
         Read More
       </button>
     </div>
@@ -91,7 +98,7 @@ const Services = () => {
           <h1 className="text-4xl mt-4 text-black font-bold">Services</h1>
           <p className="pt-4 text-md text-black max-w-2xl mx-auto">
             Curabitur sed facilisis erat. Vestibulum pharetra eros eget
-            fringilla porttitor. on Duis a orci nunc. Suspendisse ac convallis
+            fringilla porttitor. Duis a orci nunc. Suspendisse ac convallis
             sapien, quis commodo libero.
           </p>
         </div>
@@ -104,16 +111,16 @@ const Services = () => {
           loop={true}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           // pagination={{ clickable: true }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
           breakpoints={{
-            640: { slidesPerView: 1.5 },
+            640: { slidesPerView: 2 },
             1024: { slidesPerView: 2 },
             1280: { slidesPerView: 3 },
           }}
           className="relative"
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
         >
           {servicesData.map((service) => (
             <SwiperSlide key={service.id}>
@@ -122,13 +129,9 @@ const Services = () => {
           ))}
         </Swiper>
 
-        {/* Navigation Buttons */}
-        <button className="swiper-button absolute left-4 text-4xl top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white  ">
-          ❮
-        </button>
-        <button className="swiper-button absolute text-4xl right-4 top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white">
-          ❯
-        </button>
+        {/* Custom Navigation Buttons */}
+        <FaRegArrowAltCircleRight className="swiper-button-next absolute  left-4  top-1/3 mr-5 "></FaRegArrowAltCircleRight>
+        <FaRegArrowAltCircleLeft className="swiper-button-prev absolute right-4 text-4xl top-1/3 mr-5 "></FaRegArrowAltCircleLeft>
       </div>
     </section>
   );
