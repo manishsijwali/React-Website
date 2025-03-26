@@ -7,16 +7,33 @@ const Features = () => {
     .card {
       height: 300px;
       width: 400px;
-      padding: 30px;
+      padding: 20px;
       background: black;
       transform: rotate(-5deg);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
+    @media screen and (min-width: 375px) {
+      .card {
+        width: 320px;
+        margin-left:10px;
+      }
+    }
+    @media screen and (min-width: 475px) {
+      .card {
+        width: 400px;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      .card {
+        width: 300px;
+      }
+    }
     @media screen and (min-width: 1440px) {
       .card {
-       width:350px;
+        width: 300px;
       }
     }
     .card:active {
@@ -67,7 +84,6 @@ const Features = () => {
       text: "Win Awards",
     },
   ];
-  
 
   return (
     <div className="">
@@ -80,7 +96,7 @@ const Features = () => {
           commodo libero.
         </p>
       </div>
-      <div className="bg-[#1d1d1d] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4  ">
+      <div className="bg-[#1d1d1d] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4  ">
         <StyledWrapper>
           <div className="card rounded-lg my-12 ml-1">
             <div className="flex items-center justify-center">
