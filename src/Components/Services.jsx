@@ -11,6 +11,7 @@ import {
   FaRegArrowAltCircleLeft,
 } from "react-icons/fa";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import '../index.css'
 
 const servicesData = [
   {
@@ -102,6 +103,10 @@ const Services = () => {
             sapien, quis commodo libero.
           </p>
         </div>
+        <div className="bg-black">
+        <FaRegArrowAltCircleRight className="swiper-button-next "></FaRegArrowAltCircleRight>
+        <FaRegArrowAltCircleLeft className="swiper-button-prev "></FaRegArrowAltCircleLeft>
+        </div>
 
         {/* Swiper Slider */}
         <Swiper
@@ -130,8 +135,7 @@ const Services = () => {
         </Swiper>
 
         {/* Custom Navigation Buttons */}
-        <FaRegArrowAltCircleRight className="swiper-button-next absolute  left-4  top-1/3 mr-5 "></FaRegArrowAltCircleRight>
-        <FaRegArrowAltCircleLeft className="swiper-button-prev absolute right-4 text-4xl top-1/3 mr-5 "></FaRegArrowAltCircleLeft>
+      
       </div>
     </section>
   );
