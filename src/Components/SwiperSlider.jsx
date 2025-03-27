@@ -70,7 +70,7 @@ const SwiperSlider = () => {
             320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile
             480: { slidesPerView: 1.2, spaceBetween: 15 }, // Small Phones
             640: { slidesPerView: 1.5, spaceBetween: 15 }, // Tablets
-            768: { slidesPerView: 1.8, spaceBetween: 20 }, // Larger Tablets
+            768: { slidesPerView: 2, spaceBetween: 20 }, // Larger Tablets
             1024: { slidesPerView: 2, spaceBetween: 20 }, // Laptops
             1440: { slidesPerView: 2.5, spaceBetween: 25 }, // Large Screens
           }}
