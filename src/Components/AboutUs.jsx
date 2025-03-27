@@ -22,7 +22,7 @@ const AboutUs = () => {
             Get to Know
             <hr className="w-1/4 text-[#7ad6b4] mt-1" />
           </h1>
-          <h1 className="text-3xl lg:text-4xl font-bold text-black pt-3">
+          <h1 className="text-3xl lg:text-4xl font-bold  pt-3">
             About Us
           </h1>
           <h1 className="text-2xl lg:text-3xl pt-3">
@@ -37,12 +37,12 @@ const AboutUs = () => {
           </p>
           <div className="pr-12 py-12 shadow-lg mt-10 rounded-2xl border-r-2 border-l-2 border-[#7ad6b4]">
             <div className="flex items-center justify-between">
-              <span className="text-black text-2xl lg:text-3xl pl-2">
+              <span className=" text-2xl lg:text-3xl pl-2">
                 Testing <span className="text-[#7ad6b4]">M</span>antras
               </span>
-              <h1 className="text-2xl lg:text-3xl text-black">#1</h1>
+              <h1 className="text-2xl lg:text-3xl">#1</h1>
             </div>
-            <h1 className="text-xl lg:text-3xl px-2 text-black pt-4 font-bold">
+            <h1 className="text-xl lg:text-3xl px-2 pt-4 font-bold">
               Best Creative IT Agency And Solutions Since 2005.
             </h1>
           </div>

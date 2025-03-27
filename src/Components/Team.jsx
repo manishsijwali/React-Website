@@ -63,10 +63,10 @@ const Team = () => {
         <div className="mb-16">
           {/* image   */}
           <img src={img} alt="image" className="rounded-lg" />
-          <div className="text-black  text-2xl font-medium px-4 py-2 ">
+          <div className=" text-2xl font-medium px-4 py-2 ">
             {title}
           </div>
-          <div className=" text-black text-md font-medium px-4">
+          <div className="  text-md font-medium px-4">
             {description}
           </div>
         </div>
@@ -74,13 +74,13 @@ const Team = () => {
     );
   };
   return (
-    <section className="p-8 lg:p-16 bg-gray-50 relative" data-aos="fade-down">
+    <section className="p-8 lg:p-16 relative" data-aos="fade-down">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="p-8 pb-16 text-center col-span-full">
           <h4 className="text-green-300 text-xl underline">Our Team</h4>
-          <h1 className="text-4xl mt-4 text-black font-bold">Meet Our Team</h1>
-          <p className="pt-4 text-md text-black max-w-2xl mx-auto">
+          <h1 className="text-4xl mt-4 font-bold">Meet Our Team</h1>
+          <p className="pt-4 text-md max-w-2xl mx-auto">
             Curabitur sed facilisis erat. Vestibulum pharetra eros eget
             fringilla porttitor. on Duis a orci nunc. Suspendisse ac convallis
             sapien, quis commodo libero.

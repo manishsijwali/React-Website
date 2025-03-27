@@ -11,38 +11,44 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Footer = () => {
-    useEffect(() => {
-      // Initialize AOS
-      AOS.init({
-        duration: 1200, // Set animation duration
-        once: true, // Animation will happen only once
-      });
-      return () => {
-        AOS.refresh();
-      };
-    }, []);
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1200, // Set animation duration
+      once: true, // Animation will happen only once
+    });
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   return (
     <>
       <div className="relative">
-        <div className="absolute -top-28 h-[260px] lg:h-[240px]  left-1/2 transform -translate-x-1/2 w-[100%]  grid grid-cols-1 lg:grid-cols-2 max-w-6xl bg-gray-900 py-10 px-6 rounded-lg shadow-lg z-10">
+        <div className="absolute -top-28 h-[260px] lg:h-[240px]  left-1/2 transform -translate-x-1/2 w-[100%]  grid grid-cols-1 lg:grid-cols-2 max-w-6xl bg-black py-10 px-6 rounded-lg shadow-lg z-10 bg-[url('https://creasoft-react.b-cdn.net/static/media/subscribe-bg.0d96fb27ba3871079074.png')] ">
           {/* Left Side: Text Section */}
-          <div className="text-white flex flex-col gap-3 justify-center items-start" data-aos="fade-right">
+          <div
+            className="text-white flex flex-col gap-3 justify-center items-start"
+            data-aos="fade-right"
+          >
             <h3 className="text-green-400 font-semibold text-xl">
               Get In Touch
             </h3>
             <h2 className="text-3xl md:text-5xl font-bold">SUBSCRIBE OUR</h2>
             <h1
-              className="text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-wider" 
+              className="text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-wider"
               style={{
                 WebkitTextStroke: "1px grey",
                 fontFamily: "system-ui, -apple-system, sans-serif",
               }}
             >
-            NEWSLETTER
+              NEWSLETTER
             </h1>
           </div>
           {/* Right Side: Input and Button */}
-          <div className="flex items-center gap-2 max-w-lg w-full justify-center mt-4" data-aos="fade-left">
+          <div
+            className="flex items-center gap-2 max-w-lg w-full justify-center mt-4"
+            data-aos="fade-left"
+          >
             <input
               type="email"
               placeholder="Type Your Email"
@@ -53,7 +59,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <footer className="bg-[#121212] relative mt-42 pt-42 text-white py-16">
+        <footer className="bg-[#121212] relative mt-42 pt-42 text-white py-16  bg-[url('https://creasoft-react.b-cdn.net/static/media/footer-bg.c81d040ca61ed7167dc6.png')]">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Logo and Description */}
@@ -263,7 +269,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Footer */}
-            <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="border-t border-gray-600  mt-12 pt-8 flex flex-col md:flex-row justify-around items-center">
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
                 Copyright 2022 <span className="font-medium">Crea soft</span> |
                 Design By <span className="font-medium">Egens Lab</span>
