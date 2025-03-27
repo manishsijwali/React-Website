@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
-import AOS from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS CSS
+import AOS from "aos"; 
+import "aos/dist/aos.css"; 
 
 const text = "IT AGENCY.";
 

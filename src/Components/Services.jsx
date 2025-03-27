@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import {
-  FaCode,
-  FaPaintBrush,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { FaCode, FaPaintBrush, FaMobileAlt } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const servicesData = [
   {
@@ -57,7 +55,7 @@ const servicesData = [
 
 const ServiceCard = ({ id, title, description, icon }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4] transition duration-300">
+    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4] transition duration-300" data-aos="fade-up">
       <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         {/* Number Background */}
         <span className="absolute top-4 right-4 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-200">
@@ -87,8 +85,18 @@ const ServiceCard = ({ id, title, description, icon }) => {
 };
 
 const Services = () => {
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1200, // Set animation duration
+      once: true, // Animation will happen only once
+    });
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   return (
-    <section className="p-8 lg:p-16 bg-gray-50 relative">
+    <section className="p-8 lg:p-16 bg-gray-50 relative" data-aos="fade-down">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="p-4 pb-16 text-center col-span-full">

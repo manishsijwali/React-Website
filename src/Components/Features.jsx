@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Features = () => {
+  
+    useEffect(() => {
+        // Initialize AOS
+        AOS.init({
+          duration: 1200, // Set animation duration
+          once: true, // Animation will happen only once
+        });
+        return () => {
+          AOS.refresh();
+        };
+      }, []);
   //styles for card
   const StyledWrapper = styled.div`
     .card {
@@ -88,7 +101,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="bg-[#1d1d1d] p-6">
+    <div className="bg-[#1d1d1d] p-6"  data-aos="zoom-in">
       <div className="text-center py-10">
         <h4 className="text-green-300 text-xl">Care Study </h4>
         <h1 className="text-5xl text-white font-bold">Features</h1>
