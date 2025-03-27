@@ -6,8 +6,9 @@ const AboutUs = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Section */}
         <div className="px-4 lg:px-20 py-12">
-          <h1 className="text-lg pt-3 text-[#7ad6b4]">Get to Know
-          <hr className="w-1/4 text-[#7ad6b4] mt-1" />
+          <h1 className="text-lg pt-3 text-[#7ad6b4]">
+            Get to Know
+            <hr className="w-1/4 text-[#7ad6b4] mt-1" />
           </h1>
           <h1 className="text-3xl lg:text-4xl font-bold text-black pt-3">
             About Us
@@ -40,12 +41,12 @@ const AboutUs = () => {
           <img
             src="https://creasoft-react.b-cdn.net/img/about-baner-1.jpg"
             alt="About Us Image 1"
-            className="w-full rounded-4xl"
+            className="w-full lg:max-w-2xl rounded-4xl"
           />
           <img
             src="https://creasoft-react.b-cdn.net/img/about-baner-2.jpg"
             alt="About Us Image 2"
-            className="w-max-w-md h-60 lg:h-[300px] lg:max-w-lg rounded-2xl absolute right-2  hidden sm:block lg:right-2 top-[180px] lg:top-[350px] border-8 border-amber-50"
+            className="w-full max-w-md h-60 lg:h-[300px] lg:max-w-lg rounded-2xl absolute right-2 hidden sm:block lg:right-2 top-[180px] lg:top-[350px] border-8 border-amber-50"
           />
         </div>
       </div>

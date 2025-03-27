@@ -6,36 +6,37 @@ const Features = () => {
   const StyledWrapper = styled.div`
     .card {
       height: 300px;
-      width: 400px;
+      width: 100%; /* Ensures the card is responsive */
+      max-width: 400px; /* Max width to prevent being too wide */
       padding: 20px;
       background: black;
       transform: rotate(-5deg);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Added shadow for better effect */
     }
-    @media screen and (min-width: 375px) {
+
+    @media screen and (max-width: 375px) {
       .card {
-        width: 320px;
-        margin-left:10px;
+        width: 90%; /* Reduce width on smaller screens */
+        margin-left: 10px;
       }
     }
-    @media screen and (min-width: 475px) {
+
+    @media screen and (max-width: 475px) {
       .card {
-        width: 400px;
+        width: 90%;
       }
     }
-  
-    @media screen and (min-width: 768px) {
+
+    @media screen and (max-width: 768px) {
       .card {
-        width: 300px;
+        width: 80%;
       }
     }
-    @media screen and (min-width: 1440px) {
-      .card {
-        width: 300px;
-      }
-    }
+
     .card:active {
       animation: shake 0.5s ease-in-out;
     }
@@ -86,8 +87,8 @@ const Features = () => {
   ];
 
   return (
-    <div className="">
-      <div className="p-6 pt-10 text-center col-span-full bg-[#1d1d1d]">
+    <div className="bg-[#1d1d1d] p-6">
+      <div className="text-center py-10">
         <h4 className="text-green-300 text-xl">Care Study </h4>
         <h1 className="text-5xl text-white font-bold">Features</h1>
         <p className="pt-4 text-lg text-white max-w-2xl mx-auto">
@@ -96,72 +97,76 @@ const Features = () => {
           commodo libero.
         </p>
       </div>
-      <div className="bg-[#1d1d1d] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4  ">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StyledWrapper>
-          <div className="card rounded-lg my-12 ml-1">
+          <div className="card">
             <div className="flex items-center justify-center">
               <img
-                src="https://creasoft-react.b-cdn.net/img/icons/feature-icon-1.png"
-                alt=""
-                className=""
+                src={stats[0].icon}
+                alt="Feature Icon 1"
+                className="w-16 h-16"
               />
             </div>
             <div className="text-4xl text-center mt-5 text-white font-bold">
-              150<sup>+</sup>
+              {stats[0].count}
             </div>
             <div className="text-center text-2xl mt-5 text-white font-bold">
-              Project Completed
+              {stats[0].text}
             </div>
           </div>
         </StyledWrapper>
+
         <StyledWrapper>
-          <div className="card rounded-lg   my-12 ml-1">
+          <div className="card">
             <div className="flex items-center justify-center">
               <img
-                src="https://creasoft-react.b-cdn.net/img/icons/feature-icon-2.png"
-                alt=""
-                className=""
+                src={stats[1].icon}
+                alt="Feature Icon 2"
+                className="w-16 h-16"
               />
             </div>
             <div className="text-4xl text-center mt-5 text-white font-bold">
-              2150<sup>+</sup>
+              {stats[1].count}
             </div>
             <div className="text-center text-2xl mt-5 text-white font-bold">
-              Satisfied Clients
+              {stats[1].text}
             </div>
           </div>
         </StyledWrapper>
+
         <StyledWrapper>
-          <div className="card rounded-lg   my-12 ml-1">
+          <div className="card">
             <div className="flex items-center justify-center">
               <img
-                src="https://creasoft-react.b-cdn.net/img/icons/feature-icon-3.png"
-                alt=""
-                className=""
+                src={stats[2].icon}
+                alt="Feature Icon 3"
+                className="w-16 h-16"
               />
             </div>
             <div className="text-4xl text-center mt-5 text-white font-bold">
-              120<sup>+</sup>
+              {stats[2].count}
             </div>
             <div className="text-center text-2xl mt-5 text-white font-bold">
-              Expert Teams
+              {stats[2].text}
             </div>
           </div>
         </StyledWrapper>
+
         <StyledWrapper>
-          <div className="card rounded-lg  my-12 ml-1 ">
+          <div className="card">
             <div className="flex items-center justify-center">
               <img
-                src="https://creasoft-react.b-cdn.net/img/icons/feature-icon-1.png"
-                alt=""
-                className=""
+                src={stats[3].icon}
+                alt="Feature Icon 4"
+                className="w-16 h-16"
               />
             </div>
             <div className="text-4xl text-center mt-5 text-white font-bold">
-              50<sup>+</sup>
+              {stats[3].count}
             </div>
             <div className="text-center text-2xl mt-5 text-white font-bold">
-              Win Awards
+              {stats[3].text}
             </div>
           </div>
         </StyledWrapper>
