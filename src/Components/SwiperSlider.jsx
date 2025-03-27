@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React  from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -29,8 +29,7 @@ const testimonials = [
 ];
 
 const SwiperSlider = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+
 
   return (
     <>
@@ -56,17 +55,17 @@ const SwiperSlider = () => {
           speed={1000}
           freeMode={true}
           navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
+            nextEl: ".swiper-button-r",
+            prevEl: ".swiper-button-l",
           }}
-          onSwiper={(swiper) => {
-            setTimeout(() => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
-            });
-          }}
+          // onSwiper={(swiper) => {
+          //   setTimeout(() => {
+          //     swiper.params.navigation.prevEl = prevRef.current;
+          //     swiper.params.navigation.nextEl = nextRef.current;
+          //     swiper.navigation.init();
+          //     swiper.navigation.update();
+          //   });
+          // }}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile
             480: { slidesPerView: 1.2, spaceBetween: 15 }, // Small Phones
@@ -101,7 +100,7 @@ const SwiperSlider = () => {
                 </div>
 
                 {/* Quote Icon */}
-                <div className="absolute top-42 right-4 text-[100px] md:text-[200px] text-gray-500 opacity-20">
+                <div className="absolute lg:top-42 top-66 right-4 text-[150px]  md:text-[200px] text-gray-500 opacity-20">
                   &#8221;
                 </div>
               </div>
@@ -110,16 +109,10 @@ const SwiperSlider = () => {
         </Swiper>
 
         {/* Navigation Buttons (Fully Functional Now) */}
-        <button
-          ref={prevRef}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full z-10"
-        >
+        <button className="swiper-button-l  absolute left-4 text-4xl lg:top-1/2 top-[450px] transform translate-y-1/2 text-black  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❮
         </button>
-        <button
-          ref={nextRef}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full z-10"
-        >
+        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[450px] transform translate-y-1/2 text-black  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❯
         </button>
       </div>

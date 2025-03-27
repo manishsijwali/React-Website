@@ -47,7 +47,7 @@ const Team = () => {
 
   const ServiceCard = ({ id, title, description, img }) => {
     return (
-      <div className="p-8 text-center relative overflow-hidden text-[[#7ad6b4]]">
+      <div className="text-center relative overflow-hidden text-[[#7ad6b4]]">
         <div className="mb-16">
           {/* image   */}
           <img src={img} alt="image" className="rounded-lg" />
@@ -102,10 +102,10 @@ const Team = () => {
         </Swiper>
 
         {/* Navigation Buttons */}
-        <button className="swiper-button-l absolute left-4 text-4xl top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white  ">
+        <button className="swiper-button-l absolute left-4 text-4xl lg:top-1/2 top-[480px]  transform translate-y-1/2 text-black  rounded-3xl  hover:bg-gray-900 hover:text-white  ">
           ❮
         </button>
-        <button className="swiper-button-r absolute text-4xl right-4 top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white">
+        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[480px] transform translate-y-1/2 text-black  rounded-3xl  hover:bg-gray-900 hover:text-white">
           ❯
         </button>
       </div>

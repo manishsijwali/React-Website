@@ -8,9 +8,7 @@ import {
   FaCode,
   FaPaintBrush,
   FaMobileAlt,
-  FaRegArrowAltCircleLeft,
 } from "react-icons/fa";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -59,7 +57,7 @@ const servicesData = [
 
 const ServiceCard = ({ id, title, description, icon }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4]">
+    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4] transition duration-300">
       <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         {/* Number Background */}
         <span className="absolute top-4 right-4 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-200">
@@ -93,8 +91,8 @@ const Services = () => {
     <section className="p-8 lg:p-16 bg-gray-50 relative">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="p-8 pb-16 text-center col-span-full">
-          <h4 className="text-green-300 text-xl underline">Our Solutions </h4>
+        <div className="p-4 pb-16 text-center col-span-full">
+          <h4 className="text-green-300 text-xl underline">Our Solutions</h4>
           <h1 className="text-4xl mt-4 text-black font-bold">Services</h1>
           <p className="pt-4 text-md text-black max-w-2xl mx-auto">
             Curabitur sed facilisis erat. Vestibulum pharetra eros eget
@@ -102,6 +100,7 @@ const Services = () => {
             sapien, quis commodo libero.
           </p>
         </div>
+
         {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -109,7 +108,6 @@ const Services = () => {
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          // pagination={{ clickable: true }}
           breakpoints={{
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 2 },
@@ -127,10 +125,11 @@ const Services = () => {
           ))}
         </Swiper>
 
-        <button className="swiper-button-l absolute left-4 text-4xl lg:top-1/2 top-96 transform translate-y-1/2 text-black p-4 rounded-3xl  lg:hover:bg-gray-900 lg:hover:text-white  ">
+        {/* Navigation buttons */}
+        <button className="swiper-button-l  absolute left-4 text-4xl lg:top-1/2 top-[450px] transform translate-y-1/2 text-black  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❮
         </button>
-        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-96 transform translate-y-1/2 text-black p-4 rounded-3xl  lg:hover:bg-gray-900 lg:hover:text-white">
+        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[450px] transform translate-y-1/2 text-black  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❯
         </button>
       </div>
