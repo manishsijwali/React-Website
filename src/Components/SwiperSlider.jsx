@@ -88,7 +88,7 @@ const SwiperSlider = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#222222] text-white p-6 rounded-xl shadow-lg relative min-h-[250px] md:min-h-[300px]" data-aos="fade-down">
+              <div className="bg-[#222222] text-white p-6 rounded-xl shadow-lg relative min-h-[250px] md:min-h-[300px]" data-aos="fade-up">
                 {/* Star Rating */}
                 <div className="absolute top-4 right-4 text-yellow-400 text-lg">
                   {"★".repeat(testimonial.stars)}

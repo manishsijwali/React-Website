@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const cards = [
   {
@@ -22,6 +24,16 @@ const cards = [
 ];
 
 const Card = ({ title, category, image, date }) => {
+    useEffect(() => {
+      // Initialize AOS
+      AOS.init({
+        duration: 1200, // Set animation duration
+        once: true, // Animation will happen only once
+      });
+      return () => {
+        AOS.refresh();
+      };
+    }, []);
   return (
     <div className="bg-white  rounded-lg overflow-hidden max-w-sm md:w-[1000px]">
       <div className="relative overflow-hidden">
@@ -50,7 +62,7 @@ const Card = ({ title, category, image, date }) => {
 
 const CardGrid = () => {
   return (
-    <div className="grid grid-rows-1 my-12 ">
+    <div className="grid grid-rows-1 my-12" data-aos="fade-right">
       <div className="p-6 text-center col-span-full">
         <div className="text-[#7ad6b4] text-xl font-sans inline-block border-b-2 border-[#7ad6b4] mb-4">
           All Blogs
@@ -62,7 +74,7 @@ const CardGrid = () => {
           commodo libero.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-24 px-4 sm:px-10 lg:px-36 mt-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-24 px-4 sm:px-10 lg:px-36 mt-24"data-aos="fade-left">
           {cards.map((card, index) => (
             <Card key={index} {...card} />
           ))}
