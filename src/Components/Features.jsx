@@ -20,14 +20,15 @@ const Features = () => {
 
     @media screen and (max-width: 375px) {
       .card {
-        width: 90%; /* Reduce width on smaller screens */
-        margin-left: 10px;
+        width: 90%; 
+        margin-left: 20px;
       }
     }
 
     @media screen and (max-width: 475px) {
       .card {
         width: 90%;
+         margin-left: 30px;
       }
     }
 
