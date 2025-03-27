@@ -11,7 +11,6 @@ import {
   FaRegArrowAltCircleLeft,
 } from "react-icons/fa";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import '../index.css'
 
 const servicesData = [
   {
@@ -103,15 +102,10 @@ const Services = () => {
             sapien, quis commodo libero.
           </p>
         </div>
-        <div className="bg-black">
-        <FaRegArrowAltCircleRight className="swiper-button-next "></FaRegArrowAltCircleRight>
-        <FaRegArrowAltCircleLeft className="swiper-button-prev "></FaRegArrowAltCircleLeft>
-        </div>
-
         {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -121,10 +115,9 @@ const Services = () => {
             1024: { slidesPerView: 2 },
             1280: { slidesPerView: 3 },
           }}
-          className="relative"
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-r",
+            prevEl: ".swiper-button-l",
           }}
         >
           {servicesData.map((service) => (
@@ -134,8 +127,12 @@ const Services = () => {
           ))}
         </Swiper>
 
-        {/* Custom Navigation Buttons */}
-      
+        <button className="swiper-button-l absolute left-4 text-4xl lg:top-1/2 top-96 transform translate-y-1/2 text-black p-4 rounded-3xl  lg:hover:bg-gray-900 lg:hover:text-white  ">
+          ❮
+        </button>
+        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-96 transform translate-y-1/2 text-black p-4 rounded-3xl  lg:hover:bg-gray-900 lg:hover:text-white">
+          ❯
+        </button>
       </div>
     </section>
   );

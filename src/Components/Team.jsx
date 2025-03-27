@@ -84,8 +84,8 @@ const Team = () => {
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           // pagination={{ clickable: true }}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-r",
+            prevEl: ".swiper-button-l",
           }}
           breakpoints={{
             640: { slidesPerView: 1 },
@@ -102,10 +102,10 @@ const Team = () => {
         </Swiper>
 
         {/* Navigation Buttons */}
-        <button className="swiper-button absolute left-4 text-4xl top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white  ">
+        <button className="swiper-button-l absolute left-4 text-4xl top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white  ">
           ❮
         </button>
-        <button className="swiper-button absolute text-4xl right-4 top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white">
+        <button className="swiper-button-r absolute text-4xl right-4 top-1/2 transform translate-y-1/2 text-black p-4 rounded-3xl  hover:bg-gray-900 hover:text-white">
           ❯
         </button>
       </div>
