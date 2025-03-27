@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Team = () => {
+    useEffect(() => {
+      // Initialize AOS
+      AOS.init({
+        duration: 1200, // Set animation duration
+        once: true, // Animation will happen only once
+      });
+      return () => {
+        AOS.refresh();
+      };
+    }, []);
   const teams = [
     {
       id: "1",
@@ -47,7 +59,7 @@ const Team = () => {
 
   const ServiceCard = ({ id, title, description, img }) => {
     return (
-      <div className="text-center relative overflow-hidden text-[[#7ad6b4]]">
+      <div className="text-center relative overflow-hidden text-[[#7ad6b4]]" data-aos="fade-up">
         <div className="mb-16">
           {/* image   */}
           <img src={img} alt="image" className="rounded-lg" />
@@ -62,7 +74,7 @@ const Team = () => {
     );
   };
   return (
-    <section className="p-8 lg:p-16 bg-gray-50 relative">
+    <section className="p-8 lg:p-16 bg-gray-50 relative" data-aos="fade-down">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="p-8 pb-16 text-center col-span-full">

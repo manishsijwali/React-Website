@@ -55,7 +55,7 @@ const servicesData = [
 
 const ServiceCard = ({ id, title, description, icon }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4] transition duration-300" data-aos="fade-up">
+    <div className="bg-white rounded-lg shadow-lg p-8 text-center relative overflow-hidden hover:bg-black text-[#7ad6b4] transition duration-300" data-aos="fade-">
       <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
         {/* Number Background */}
         <span className="absolute top-4 right-4 text-4xl sm:text-5xl md:text-6xl font-bold text-gray-200">

@@ -37,7 +37,7 @@ const StyledWrapper = styled.div`
     top: 0;
     bottom: 0;
     transform: skewX(-45deg) scale(0, 1);
-    transition: all 0.5s;
+    transition: all 1s;
   }
 
   .btn:hover:after {
@@ -140,12 +140,13 @@ const Hero = () => {
       </div>
 
       {/* Right Side (Image with Zoom Effect) */}
-      <div className="min-h-[600px] flex items-center justify-center sm:block hidden">
+      <div className="min-h-[600px] flex items-center justify-center sm:block hidden" data-aos="fade-left"
+     data-aos-duration="3000">
         <div className="relative overflow-hidden">
           <img
             src="https://creasoft-react.b-cdn.net/img/hero-banner.jpg"
             alt="Zoomable"
-            className={`transition-transform duration-5000 transform ${
+            className={`transition-transform duration-8000 transform ${
               isZoomed ? "scale-150" : "scale-110"
             }`}
           />

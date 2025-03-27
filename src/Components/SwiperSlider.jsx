@@ -1,8 +1,10 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -29,11 +31,20 @@ const testimonials = [
 ];
 
 const SwiperSlider = () => {
-
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1200, // Set animation duration
+      once: true, // Animation will happen only once
+    });
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
 
   return (
     <>
-      <div className="p-6 pt-10 text-center col-span-full bg-[#1d1d1d]">
+      <div className="p-6 pt-10 text-center col-span-full bg-[#1d1d1d]"data-aos="fade-up">
         <h4 className="text-green-300 text-xl underline py-2">Testimonial </h4>
         <h1 className="text-5xl text-white font-bold">Client Say About Us</h1>
         <p className="pt-4 text-lg text-white max-w-2xl mx-auto">
@@ -77,7 +88,7 @@ const SwiperSlider = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#222222] text-white p-6 rounded-xl shadow-lg relative min-h-[250px] md:min-h-[300px]">
+              <div className="bg-[#222222] text-white p-6 rounded-xl shadow-lg relative min-h-[250px] md:min-h-[300px]" data-aos="fade-down">
                 {/* Star Rating */}
                 <div className="absolute top-4 right-4 text-yellow-400 text-lg">
                   {"★".repeat(testimonial.stars)}

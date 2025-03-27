@@ -1,7 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+    useEffect(() => {
+      // Initialize AOS
+      AOS.init({
+        duration: 1200, // Set animation duration
+        once: true, // Animation will happen only once
+      });
+      return () => {
+        AOS.refresh();
+      };
+    }, []);
   const projects = [
     {
       id: 1,
@@ -48,7 +60,7 @@ const Projects = () => {
     "Graphic Design",
   ];
   return (
-    <div className="grid grid-rows-1 mt-12 ">
+    <div className="grid grid-rows-1 mt-12 "  data-aos="fade-down">
       <div className="p-6 text-center col-span-full">
         <div className="text-[#7ad6b4] text-xl font-sans inline-block border-b-2 border-[#7ad6b4] mb-4">
           Case Study
@@ -78,7 +90,7 @@ const Projects = () => {
         </div>
 
         {/* <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-24 mt-24 "> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-36 mt-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-36 mt-24"  data-aos="fade-up">
           {projects.map((project) => (
             <div
               key={project.id}

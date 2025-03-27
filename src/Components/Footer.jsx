@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Facebook,
   Instagram,
@@ -7,20 +7,32 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+    useEffect(() => {
+      // Initialize AOS
+      AOS.init({
+        duration: 1200, // Set animation duration
+        once: true, // Animation will happen only once
+      });
+      return () => {
+        AOS.refresh();
+      };
+    }, []);
   return (
     <>
       <div className="relative">
         <div className="absolute -top-28 h-[260px] lg:h-[240px]  left-1/2 transform -translate-x-1/2 w-[100%]  grid grid-cols-1 lg:grid-cols-2 max-w-6xl bg-gray-900 py-10 px-6 rounded-lg shadow-lg z-10">
           {/* Left Side: Text Section */}
-          <div className="text-white flex flex-col gap-3 justify-center items-start">
+          <div className="text-white flex flex-col gap-3 justify-center items-start" data-aos="fade-right">
             <h3 className="text-green-400 font-semibold text-xl">
               Get In Touch
             </h3>
             <h2 className="text-3xl md:text-5xl font-bold">SUBSCRIBE OUR</h2>
             <h1
-              className="text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-wider"
+              className="text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-wider" 
               style={{
                 WebkitTextStroke: "1px grey",
                 fontFamily: "system-ui, -apple-system, sans-serif",
@@ -30,7 +42,7 @@ const Footer = () => {
             </h1>
           </div>
           {/* Right Side: Input and Button */}
-          <div className="flex items-center gap-2 max-w-lg w-full justify-center mt-4">
+          <div className="flex items-center gap-2 max-w-lg w-full justify-center mt-4" data-aos="fade-left">
             <input
               type="email"
               placeholder="Type Your Email"
