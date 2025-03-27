@@ -74,7 +74,7 @@ const CardGrid = () => {
           commodo libero.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-24 px-4 sm:px-10 lg:px-36 mt-24"data-aos="fade-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-24 gap-10 px-4 sm:px-10 lg:px-36 mt-24"data-aos="fade-left">
           {cards.map((card, index) => (
             <Card key={index} {...card} />
           ))}
