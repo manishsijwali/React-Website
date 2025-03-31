@@ -121,7 +121,7 @@ const Hero = () => {
                 </motion.h1>
               </div>
             </div>
-            <p className="px-4 text-white font-sans mt-6" data-aos="fade-right">
+            <p className="px-4  text-white font-sans mt-6" data-aos="fade-right">
               Curabitur sed facilisis erat. Vestibulum pharetra eros eget
               fringilla porttitor. Duis a orci nunc. Suspendisse ac convallis
               sapien, quis commodo libero. Donec nec dui luctus, pellentesque
