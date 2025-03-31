@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="pb-24">
             <div className="lg:text-5xl text-4xl bg-[#222222] w-full py-6 px-4 font-bold">
               <div className="text-white">CREATIVE & MINIMAL</div>
-              <div className="bg-[#222222] w-full py-6">
+              <div className=" w-full py-6">
                 <motion.h1
                   className="text-transparent bg-clip-text font-bold text-4xl md:text-5xl tracking-wider flex"
                   style={{
@@ -121,7 +121,7 @@ const Hero = () => {
                 </motion.h1>
               </div>
             </div>
-            <p className="px-4 font-sans text-white mt-6" data-aos="fade-right">
+            <p className="px-4 text-white font-sans mt-6" data-aos="fade-right">
               Curabitur sed facilisis erat. Vestibulum pharetra eros eget
               fringilla porttitor. Duis a orci nunc. Suspendisse ac convallis
               sapien, quis commodo libero. Donec nec dui luctus, pellentesque

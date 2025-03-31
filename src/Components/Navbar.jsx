@@ -61,7 +61,7 @@ export default function Navbar() {
   `;
 
   return (
-    <nav className="shadow-md bg-[#222222] lg:py-4 py-4 sticky top-0 z-50">
+    <nav className="shadow-md bg-[#222222] lg:py-4 py-2 sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         <span className="text-white text-3xl">
           Testing <span className="text-green-400">M</span>antras
