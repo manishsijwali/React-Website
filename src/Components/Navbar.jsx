@@ -110,21 +110,27 @@ export default function Navbar() {
           <hr className="w-full text-green-300 mt-2" />
 
           <ul className="mt-6 space-y-4">
-            {[
-              "Home",
-              "About Us",
-              "Services",
-              "Projects",
-              "Blog",
-              "Contact",
-            ].map((item) => (
-              <li key={item}>
-                <Link to={'/services'} href="#" className="hover:text-green-500">
-                  {item}
-                </Link>
-                <hr className="w-full text-gray-100 mt-1" />
-              </li>
-            ))}
+            <ul className="space-y-2">
+              {[
+                "Home",
+                "About Us",
+                "Services",
+                "Project",
+                "Blog",
+                "Contact",
+              ].map((item) => (
+                <li key={item}>
+                  <Link
+                    to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="hover:text-green-500 block py-1"
+                  >
+                    {item}
+                  </Link>
+                  <hr className="w-full border-gray-100 mt-1" />
+                </li>
+              ))}
+            </ul>
+
             <div className="flex justify-center mt-10">
               <StyledWrapper>
                 <button className="btn"> Get A Quote</button>
@@ -135,15 +141,16 @@ export default function Navbar() {
 
         {/* Full screen navigation */}
         <div className="md:flex md:items-center md:space-x-10 hidden sm:block">
-          {["Home", "About Us", "Service", "Project", "Blog", "Contact"].map(
+          {["Home", "About Us", "Services", "Project", "Blog", "Contact"].map(
             (item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-white hover:text-green-500"
-              >
-                {item}
-              </a>
+              <div key={item}>
+                <Link
+                  to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="text-white hover:text-green-500"
+                >
+                  {item}
+                </Link>
+              </div>
             )
           )}
         </div>
