@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Toggle from "./Toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,6 +68,7 @@ export default function Navbar() {
         </span>
 
         <div className="flex items-center ml-auto md:hidden">
+          <button>{<Toggle />}</button>
           <button
             onClick={toggleSidebar}
             className="focus:outline-none cursor-pointer"
@@ -154,10 +156,15 @@ export default function Navbar() {
             )
           )}
         </div>
-        <div className="hidden sm:block">
-          <StyledWrapper>
-            <button className="btn"> Get A Quote</button>
-          </StyledWrapper>
+        <div className="flex ">
+          <div className="hidden sm:block">
+            <button>{<Toggle />}</button>
+          </div>
+          <div className="hidden sm:block">
+            <StyledWrapper>
+              <button className="btn"> Get A Quote</button>
+            </StyledWrapper>
+          </div>
         </div>
       </div>
     </nav>

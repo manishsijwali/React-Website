@@ -1,31 +1,48 @@
 import React, { useState, useEffect } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
+import "../../src/index.css";
 
-export default function ThemeToggle() {
+const Toggle = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    // Check localStorage for saved theme preference and initialize darkMode accordingly
     return localStorage.getItem("theme") === "dark";
   });
 
   useEffect(() => {
-    // Apply the dark class to the body tag if darkMode is true, else remove it
     if (darkMode) {
-      document.body.classList.add("dark");
+      document.body.classList.add("dark-mode");
       localStorage.setItem("theme", "dark");
     } else {
-      document.body.classList.remove("dark");
+      document.body.classList.remove("dark-mode");
       localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-black transition-colors duration-300">
-      <button
-        onClick={() => setDarkMode(!darkMode)}
-        className="px-4 py-2 text-lg font-semibold bg-gray-200 dark:bg-gray-800 dark:text-white text-black rounded-lg shadow-md transition-all duration-300"
-        aria-label={`Switch to ${darkMode ? "Light" : "Dark"} Mode`}
+    <div className="p-4 flex items-center gap-3">
+      <span className="text-lg font-semibold">
+        {/* {darkMode ? "Dark Mode" : "Light Mode"} */}
+      </span>
+      {/* Toggle Switch with Icons */}
+      <div
+        className={`relative w-16 h-8 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 cursor-pointer transition-all duration-300 ${
+          darkMode ? "bg-amber-700" : ""
+        }`}
+        onClick={() => setDarkMode((prevMode) => !prevMode)}
       >
-        {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-      </button>
+        {/* Sun Icon */}
+        <FaSun className="absolute left-2 text-yellow-500 text-lg" />
+        {/* Moon Icon */}
+        <FaMoon className="absolute right-2 text-gray-800 dark:text-white text-lg" />
+
+        {/* Toggle Button */}
+        <div
+          className={`bg-white w-7 h-7 rounded-full shadow-md transform transition-all duration-300 flex items-center justify-center ${
+            darkMode ? "translate-x-8" : "translate-x-0"
+          }`}
+        />
+      </div>
     </div>
   );
-}
+};
+
+export default Toggle;
