@@ -14,7 +14,7 @@ const AboutUs = () => {
       };
     }, []);
   return (
-    <div className="p-4">
+    <div className="p-4 mt-32">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Section */}
         <div className="px-4 lg:px-20 py-12" data-aos="fade-right">

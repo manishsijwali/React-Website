@@ -5,10 +5,10 @@ import "aos/dist/aos.css";
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
     useEffect(() => {
-      // Initialize AOS
+      
       AOS.init({
-        duration: 1200, // Set animation duration
-        once: true, // Animation will happen only once
+        duration: 1200, 
+        once: true, 
       });
       return () => {
         AOS.refresh();
@@ -60,7 +60,7 @@ const Projects = () => {
     "Graphic Design",
   ];
   return (
-    <div className="grid grid-rows-1 mt-12 "  data-aos="fade-down">
+    <div className="grid grid-rows-1 mt-32"  data-aos="fade-down">
       <div className="p-6 text-center col-span-full">
         <div className="text-[#7ad6b4] text-xl font-sans inline-block border-b-2 border-[#7ad6b4] mb-4">
           Case Study
