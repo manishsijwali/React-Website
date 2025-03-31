@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Navbar() {
@@ -118,9 +119,9 @@ export default function Navbar() {
               "Contact",
             ].map((item) => (
               <li key={item}>
-                <a href="#" className="hover:text-green-500">
+                <Link to={'/services'} href="#" className="hover:text-green-500">
                   {item}
-                </a>
+                </Link>
                 <hr className="w-full text-gray-100 mt-1" />
               </li>
             ))}
@@ -139,7 +140,7 @@ export default function Navbar() {
               <a
                 key={item}
                 href="#"
-                className="text-gray-800 dark:text-white hover:text-green-500"
+                className="text-white hover:text-green-500"
               >
                 {item}
               </a>
