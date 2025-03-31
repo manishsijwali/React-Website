@@ -93,7 +93,7 @@ export default function Navbar() {
         {/* Sidebar */}
         <div
           ref={sidebarRef}
-          className={`fixed top-0 left-0 h-full w-64 bg-amber-50 p-4 transform transition-transform duration-1000 ease-in-out ${
+          className={`fixed top-0 left-0 h-full w-64 text-black bg-white p-4 transform transition-transform duration-1000 ease-in-out ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           } z-50 shadow-lg border-r`}
         >
