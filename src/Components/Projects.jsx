@@ -65,7 +65,7 @@ const Projects = () => {
         <div className="text-[#7ad6b4] text-xl font-sans inline-block border-b-2 border-[#7ad6b4] mb-4">
           Case Study
         </div>
-        <h1 className="text-4xl text-black font-bold">Projects</h1>
+        <h1 className="text-4xl font-bold">Projects</h1>
         <p className="pt-4 text-lg max-w-2xl mx-auto mb-4 font-serif">
           Curabitur sed facilisis erat. Vestibulum pharetra eros eget fringilla
           porttitor. Duis a orci nunc. Suspendisse ac convallis sapien, quis

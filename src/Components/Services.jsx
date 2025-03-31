@@ -101,8 +101,8 @@ const Services = () => {
         {/* Header */}
         <div className="p-4 pb-16 text-center col-span-full">
           <h4 className="text-green-300 text-xl underline">Our Solutions</h4>
-          <h1 className="text-4xl mt-4 text-black font-bold">Services</h1>
-          <p className="pt-4 text-md text-black max-w-2xl mx-auto">
+          <h1 className="text-4xl mt-4  font-bold">Services</h1>
+          <p className="pt-4 text-md  max-w-2xl mx-auto">
             Curabitur sed facilisis erat. Vestibulum pharetra eros eget
             fringilla porttitor. Duis a orci nunc. Suspendisse ac convallis
             sapien, quis commodo libero.
@@ -134,10 +134,10 @@ const Services = () => {
         </Swiper>
 
         {/* Navigation buttons */}
-        <button className="swiper-button-l  absolute left-4 text-4xl lg:top-1/2 top-[450px] transform translate-y-1/2 text-black  rounded-3xl hover:bg-gray-900 hover:text-white">
+        <button className="swiper-button-l  absolute left-4 text-4xl lg:top-1/2 top-[450px] transform translate-y-1/2  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❮
         </button>
-        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[450px] transform translate-y-1/2 text-black  rounded-3xl hover:bg-gray-900 hover:text-white">
+        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[450px] transform translate-y-1/2  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❯
         </button>
       </div>
