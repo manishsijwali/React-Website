@@ -61,7 +61,7 @@ export default function Navbar() {
   `;
 
   return (
-    <nav className="shadow-md bg-[#222222] lg:py-4 py-2 sticky top-0 z-50">
+    <nav className="shadow-md bg-[#222222] lg:py-4 py-2 fixed top-0 w-full z-50">
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         <span className="text-white text-3xl">
           Testing <span className="text-green-400">M</span>antras
@@ -93,7 +93,7 @@ export default function Navbar() {
         {/* Sidebar */}
         <div
           ref={sidebarRef}
-          className={`fixed top-0 left-0 h-full w-64 bg-white text-black p-4 transform transition-transform duration-1000 ease-in-out ${
+          className={`fixed top-0 left-0 h-full w-64 bg-amber-50 p-4 transform transition-transform duration-1000 ease-in-out ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           } z-50 shadow-lg border-r`}
         >

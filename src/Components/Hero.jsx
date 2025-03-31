@@ -69,7 +69,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="bg-[url('https://creasoft-react.b-cdn.net/static/media/bg.19bfdc4e473c5997188d.png')] bg-[#191a1c] bg-cover bg-center w-full">
+    <div className="bg-[url('https://creasoft-react.b-cdn.net/static/media/bg.19bfdc4e473c5997188d.png')] lg:mt:24 mt-20 bg-[#191a1c] bg-cover bg-center w-full">
       <div className="grid grid-cols-1 sm:grid-cols-2">
         {/* Left Side */}
         <div className="min-h-[600px] flex items-center justify-center">
