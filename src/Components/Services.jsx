@@ -96,10 +96,10 @@ const Services = () => {
     };
   }, []);
   return (
-    <section className="p-8 lg:p-16 relative " data-aos="fade-down">
-      <div className="container mx-auto mt-32 px-6">
+    <section className="p-8 lg:p-16 relative" data-aos="fade-down">
+      <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="p-4 pb-16 text-center col-span-full">
+        <div className="p-4 pb-16 mt-32 text-center col-span-full">
           <h4 className="text-green-300 text-xl underline">Our Solutions</h4>
           <h1 className="text-4xl mt-4  font-bold">Services</h1>
           <p className="pt-4 text-md  max-w-2xl mx-auto">

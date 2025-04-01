@@ -5,6 +5,7 @@ import Services from "../Components/Services"
 import Home from "../Components/Home";
 import AboutUs from "../Components/AboutUs";
 import Projects from "../Components/Projects";
+import Contact from "../Components/Contact";
 
 // ["Home", "About Us", "Services", "Project", "Blog", "Contact"]
 const router = createBrowserRouter([
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       { path: "/about-us", element: <AboutUs /> },      
       { path: "/services", element: <Services /> },
       { path: "/project", element: <Projects /> },
-    //   { path: "/blog", element: <Services /> },
+      { path: "/contact", element: <Contact /> },
     //   { path: "/contact", element: <Services /> },
 
     ],

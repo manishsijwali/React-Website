@@ -13,9 +13,14 @@ html,
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  /* text-color:#7ad6b4 */
   
 }
 .dark-mode {
   background-color: black;
+  color: white;
+
+}
+.dark-mode input::placeholder {
   color: white;
 }
