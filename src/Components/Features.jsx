@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Features = () => {
+
   
     useEffect(() => {
         // Initialize AOS
@@ -100,6 +101,22 @@ const Features = () => {
     },
   ];
 
+  const [count, setCount] = useState();
+  const targetCount = 150; // Target value to count to
+  const speed = 100;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount < targetCount) {
+          return prevCount + 1;
+        }
+        clearInterval(interval); // Stop the interval once the target is reached
+        return prevCount;
+      });
+    }, speed);
+
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
+  }, []);
   return (
     <div className="bg-[#1d1d1d] p-6"  data-aos="zoom-in">
       <div className="text-center py-10">

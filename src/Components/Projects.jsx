@@ -4,16 +4,15 @@ import "aos/dist/aos.css";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-    useEffect(() => {
-      
-      AOS.init({
-        duration: 1200, 
-        once: true, 
-      });
-      return () => {
-        AOS.refresh();
-      };
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
   const projects = [
     {
       id: 1,
@@ -60,7 +59,7 @@ const Projects = () => {
     "Graphic Design",
   ];
   return (
-    <div className="grid grid-rows-1 mt-32"  data-aos="fade-down">
+    <div className="grid grid-rows-1 mt-32" data-aos="fade-down">
       <div className="p-6 text-center col-span-full">
         <div className="text-[#7ad6b4] text-xl font-sans inline-block border-b-2 border-[#7ad6b4] mb-4">
           Case Study
@@ -77,12 +76,7 @@ const Projects = () => {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-lg font-semibold transition-all duration-300
-        ${
-          selectedCategory === cat
-            ? "bg-black text-white scale-105 shadow-md"
-            : "bg-gray-200 text-gray-800 hover:bg-gray-300 hover:shadow"
-        }
-        focus:outline-none focus:ring-2 focus:ring-black/50`}
+        focus:outline-none focus:ring-2 focus:ring-black/50 bg-black text-white hover:bg-white hover:text-black`}
             >
               {cat}
             </button>
@@ -90,7 +84,10 @@ const Projects = () => {
         </div>
 
         {/* <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-24 mt-24 "> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-36 mt-24"  data-aos="fade-up">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-36 mt-24"
+          data-aos="fade-up"
+        >
           {projects.map((project) => (
             <div
               key={project.id}
@@ -99,14 +96,21 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-64 object-cover"
+                className="w-full  object-cover h-full"
               />
               {/* Hover Overlay */}
-              <div className="absolute bottom-4 left-0 w-full bg-black bg-opacity-80 p-4 transition-transform transform translate-y-5 group-hover:translate-y-0 duration-300 ease-in-out">
-                <p className="text-lg underline text-start text-green-400">{project.category}</p>
-                <h3 className="text-xl text-start font-semibold text-white">
-                  {project.title}
-                </h3>
+              <div className="relative group">
+                <div className="absolute bottom-8 lg:left-2 sm:left-2 left-4 w-[90%] sm:w-[362px] rounded-2xl bg-black bg-opacity-80 p-4 transition-transform transform translate-y-5 group-hover:translate-y-0 duration-300 ease-in-out">
+                  <p className="text-lg underline text-start text-green-400">
+                    {project.category}
+                  </p>
+                  <h3 className="text-xl text-start font-semibold text-white">
+                    {project.title}
+                  </h3>
+                  <button className="absolute top-10 bg-black right-2 text-[#7ad6b4] cursor-pointer px-4 py-2 rounded-md opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300 ease-in-out">
+                    View More
+                  </button>
+                </div>
               </div>
             </div>
           ))}
