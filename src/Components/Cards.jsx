@@ -45,7 +45,7 @@ const Card = ({ title, category, image, date }) => {
             className="w-full h-56 lg:h-72 object-cover"
           />
         </div>
-        <span className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 text-sm rounded-full">
+        <span className="absolute top-3 left-3 bg-[#7ad6b4] text-gray-800 px-3 py-1 text-sm rounded-full">
           {category}
         </span>
       </div>

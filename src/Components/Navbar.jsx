@@ -64,7 +64,7 @@ export default function Navbar() {
     <nav className="shadow-md bg-[#222222] lg:py-4 py-2 fixed top-0 w-full z-50">
       <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
         <span className="text-white text-3xl">
-          Testing <span className="text-green-400">M</span>antras
+          Testing <span className="text-[#7ad6b4]">M</span>antras
         </span>
 
         <div className="flex items-center ml-auto md:hidden">
@@ -78,7 +78,7 @@ export default function Navbar() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              className="w-8 h-8 text-green-300"
+              className="w-8 h-8 text-[#7ad6b4]"
               strokeWidth="2"
             >
               <path
@@ -148,7 +148,7 @@ export default function Navbar() {
               <div key={item}>
                 <Link
                   to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-white hover:text-green-500"
+                  className="text-white hover:text-[#7ad6b4]"
                 >
                   {item}
                 </Link>

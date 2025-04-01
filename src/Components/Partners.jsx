@@ -62,7 +62,7 @@ export default function Partners() {
   ];
 
   return (
-    <div className="w-full bg-[#121212] py-16 mt-20" data-aos="fade-down">
+    <div className="w-full bg-[#121212] py-16 mt-32" data-aos="fade-down">
     <div className="container mx-auto px-4 md:px-6">
       <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
         {/* Heading Section */}

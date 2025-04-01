@@ -118,9 +118,9 @@ const Features = () => {
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, []);
   return (
-    <div className="bg-[#1d1d1d] p-6"  data-aos="zoom-in">
+    <div className="bg-[#1d1d1d] p-6 mt-32"  data-aos="zoom-in">
       <div className="text-center py-10">
-        <h4 className="text-green-300 text-xl">Care Study </h4>
+        <h4 className="text-green-300 text-xl underline">Care Study </h4>
         <h1 className="text-5xl text-white font-bold">Features</h1>
         <p className="pt-4 text-lg text-white max-w-2xl mx-auto">
           Curabitur sed facilisis erat. Vestibulum pharetra eros eget fringilla

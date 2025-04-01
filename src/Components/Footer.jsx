@@ -30,7 +30,7 @@ const Footer = () => {
             className="text-white flex flex-col gap-3 justify-center items-start"
             data-aos="fade-right"
           >
-            <h3 className="text-green-400 font-semibold text-xl">
+            <h3 className="text-[#7ad6b4] font-semibold text-xl">
               Get In Touch
             </h3>
             <h2 className="text-3xl md:text-5xl font-bold">SUBSCRIBE OUR</h2>
@@ -54,7 +54,7 @@ const Footer = () => {
               placeholder="Type Your Email"
               className="flex-1 px-4 py-3 bg-black text-white border-none outline-none rounded-md"
             />
-            <button className="px-6 py-3 bg-green-400 text-black font-bold rounded-md hover:bg-green-500">
+            <button className="px-6 py-3 bg-[#7ad6b4] text-black font-bold rounded-md ">
               SUBMIT
             </button>
           </div>
@@ -234,7 +234,7 @@ const Footer = () => {
                 <ul className="space-y-4">
                   <li className="flex">
                     <Phone
-                      className="text-emerald-400 mr-3 mt-1 flex-shrink-0"
+                      className="text-[#7ad6b4] mr-3 mt-1 flex-shrink-0"
                       size={20}
                     />
                     <div className="space-y-1">
@@ -244,7 +244,7 @@ const Footer = () => {
                   </li>
                   <li className="flex">
                     <Mail
-                      className="text-emerald-400 mr-3 mt-1 flex-shrink-0"
+                      className="text-[#7ad6b4] mr-3 mt-1 flex-shrink-0"
                       size={20}
                     />
                     <div className="space-y-1">
@@ -254,7 +254,7 @@ const Footer = () => {
                   </li>
                   <li className="flex">
                     <MapPin
-                      className="text-emerald-400 mr-3 mt-1 flex-shrink-0"
+                      className="text-[#7ad6b4] mr-3 mt-1 flex-shrink-0"
                       size={20}
                     />
                     <div>

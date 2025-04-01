@@ -74,7 +74,7 @@ const Team = () => {
     );
   };
   return (
-    <section className="p-8 lg:p-16 relative" data-aos="fade-down">
+    <section className="p-8 lg:p-16 relative mt-32" data-aos="fade-down">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="p-8 pb-16 text-center col-span-full">
