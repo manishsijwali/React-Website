@@ -134,10 +134,10 @@ const Services = () => {
         </Swiper>
 
         {/* Navigation buttons */}
-        <button className="swiper-button-l  absolute left-4 text-4xl lg:top-1/2 top-[450px] transform translate-y-1/2  rounded-3xl hover:bg-gray-900 hover:text-white">
+        <button className="swiper-button-l  absolute left-4 text-4xl lg:top-1/2 top-[450px] transform translate-y-[300%]  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❮
         </button>
-        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[450px] transform translate-y-1/2  rounded-3xl hover:bg-gray-900 hover:text-white">
+        <button className="swiper-button-r absolute text-4xl right-4 lg:top-1/2 top-[450px] transform translate-y-[300%]  rounded-3xl hover:bg-gray-900 hover:text-white">
           ❯
         </button>
       </div>
